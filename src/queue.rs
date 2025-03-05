@@ -3,7 +3,6 @@ use std::collections::VecDeque;
 use std::sync::{Arc, RwLock};
 
 pub struct MessageQueue<T: Clone> {
-    // Add Clone constraint to T.
     pub queue: Arc<RwLock<VecDeque<Message<T>>>>,
 }
 
